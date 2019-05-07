@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="number" id="t1">
+	<input type="text" id="t2">
+	<input type="number" id="t3"> =
+	<input type="text" id="t4">
+	<br>
+	<button onclick="cal()">CLICK</button>
+
+	<script type="text/javascript">
+		function cal() {
+			var t1 = document.getElementById("t1").value;
+			var t2 = document.getElementById("t2").value;//연산자
+			var t3 = document.getElementById("t3").value;
+			var t4 = document.getElementById("t4");
+
+			if (t2 == '*') {
+				t4.value = t1 * t3;
+			} else if (t2 == '/') {
+				t4.value = t1 / t3;
+			} else if (t2 == '%') {
+				t4.value = t1 % t3;
+			} else if (t2 == '-') {
+				t4.value = t1 - t3;
+			} else {
+				t4.value = parseInt(t1) + parseInt(t3);
+			}
+		}
+		/*
+			1. 버튼 클릭이 작동?? OK
+			2. 입력한값이 잘 작동??
+			3. 연산한 결과값이 작동??
+			4. 연산한 결과를 input에 대입		
+		 */
+	</script>
+
+</body>
+</html>
