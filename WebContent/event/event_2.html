@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_2</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var btn = document.getElementById('btn');
+
+		btn.addEventListener('click', go);
+
+		function go() {
+			alert('test');
+
+		}
+
+		var b = document.getElementsByClassName('b');
+
+		for (var i = 0; i < b.length; i++) 
+			b[i].addEvantListener('click', function() {
+				alert('class');
+			})
+		}
+	}
+</script>
+</head>
+<body>
+	<button id="btn" class="b">click</button>
+	<button id="btn" class="b">click</button>
+	<button id="btn" class="b">click</button>
+	<button id="btn" class="b">click</button>
+</body>
+</html>

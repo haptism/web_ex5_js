@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_1</title>
+</head>
+<body>
+	<!-- 	<input text="text" onkeyup="go()" id="in">
+	<input text="text" onkeypress="go()" id="in"> -->
+	<input text="text" onkeydown="go()" id="in">
+	<div id="result"></div>
+	<button id="btn">Click</button>
+
+	<script type="text/javascript">
+		var btn = document.getElementById('btn');
+		btn.onclick = function() {
+			alert("click");
+
+		}
+		function go() {
+			var i = document.getElementById('in').value;
+			var result = document.getElementById("result");
+			result.innerHTML = i;
+		}
+	</script>
+
+</body>
+</html>
