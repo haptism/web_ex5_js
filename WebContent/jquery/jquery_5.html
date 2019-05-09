@@ -9,16 +9,33 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script type="text/javascript">
   	$(function() {
+  		
+  		var id=0;
+  		var count=0;
+  		
 		$('#btn').click(function() {
-			$('#result').append('<input type="file"><span class="d">X</span>');
+			if(count<5){
+				$('#result').append('<div id="d'+id+'"><input type="file"><span title="d'+id+'" class="d">X</span></div>');
+				id++;
+				count++;
+			}else {
+				alert('최대 5개만 추가 가능');
+			}
 		});
+		
+		$("#result").on('click','.d', function() {
+			//var i =$(this).attr('title');
+			//$('#'+i).remove();
+			$(this).parent().remove();
+			count--;
+		});
+		
 	});
   </script>
   <style type="text/css">
-  	input {
-  		display: inline;
-  	}
+  	
   	.d {
+  		cursor:pointer;
   		color: red;
   	}
   </style>
